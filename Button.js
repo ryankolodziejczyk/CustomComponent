@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import { TouchableOpacity } from "react-native-web";
+import { TouchableOpacity } from "react-native";
 import { Text, StyleSheet, View } from "react-native";
 
 export class CustomButton extends Component {
   render() {
     return (
-      <TouchableOpacity onPress={() => alert("this is a button")}>
+      <TouchableOpacity onPress={() => alert("one of many buttons")}>
         <View style={styles.button}>
-          <Text> Example!! </Text>
+          <Text>Example!!</Text>
         </View>
       </TouchableOpacity>
     );
