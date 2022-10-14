@@ -255,7 +255,7 @@ const outside = ({ navigation }) => {
         </Text>
         <View style={{ height: 17 }} />
         <Button
-          color="navy"
+          color="dodgerblue"
           title="Go on Another Adventure!"
           onPress={() => navigation.navigate("Home", { name: "Home" })}
         />
@@ -407,7 +407,7 @@ const styles = StyleSheet.create({
 
   outsideB: {
     flex: 1,
-    backgroundColor: "lightblue",
+    backgroundColor: "navy",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
@@ -499,7 +499,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     margin: 12,
     fontFamily: "Baskerville-SemiBold",
-    color: "black",
+    color: "ivory",
     textAlign: "center",
   },
 
@@ -523,7 +523,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
     margin: 12,
     fontFamily: "Baskerville-SemiBold",
-    color: "floralwhite",
+    color: "ivory",
     textAlign: "center",
   },
 
@@ -531,7 +531,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
     margin: 12,
     fontFamily: "Baskerville-SemiBold",
-    color: "black",
+    color: "ivory",
     textAlign: "center",
   },
 
@@ -539,7 +539,7 @@ const styles = StyleSheet.create({
     fontSize: 26,
     margin: 12,
     fontFamily: "Baskerville-SemiBold",
-    color: "black",
+    color: "ivory",
     textAlign: "center",
   },
 });
