@@ -25,14 +25,14 @@ export default function App() {
           component={HomeScreen}
           options={{ title: "Welcome to my Halloween Game!" }}
         />
-        <Stack.Screen name="House" component={house} />
-        <Stack.Screen name="Street" component={street} />
-        <Stack.Screen name="Backyard" component={backyard} />
-        <Stack.Screen name="HallLeft" component={left} />
-        <Stack.Screen name="HallRight" component={right} />
-        <Stack.Screen name="Outside" component={outside} />
-        <Stack.Screen name="Group" component={group} />
-        <Stack.Screen name="Dogs" component={dogs} />
+        <Stack.Screen name="House" component={House} />
+        <Stack.Screen name="Street" component={Street} />
+        <Stack.Screen name="Backyard" component={Backyard} />
+        <Stack.Screen name="HallLeft" component={Left} />
+        <Stack.Screen name="HallRight" component={Right} />
+        <Stack.Screen name="Outside" component={Outside} />
+        <Stack.Screen name="Group" component={Group} />
+        <Stack.Screen name="Dogs" component={Dogs} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -55,31 +55,36 @@ const HomeScreen = ({ navigation }) => {
           walk around to the backyard. Click one of the following options to
           advance and good luck, you'll need it.{" "}
         </Text>
-        <View style={{ height: 17 }} />
-        <Button
-          color="black"
-          title="Go Route 1: into the house"
-          onPress={() => navigation.navigate("House", { name: "House" })}
-        />
-        <View style={{ height: 17 }} />
-        <Button
-          color="black"
-          title="Go Route 2: go down the street"
-          onPress={() => navigation.navigate("Street", { name: "Street" })}
-        />
-        <View style={{ height: 17 }} />
-        <Button
-          color="black"
-          title="Go Route 3: go to the backyard"
-          onPress={() => navigation.navigate("Backyard", { name: "Backyard" })}
-        />
+        <View style={{ width: deviceWidth * 0.3, flex: 1 }}>
+          <View style={{ height: 17 }} />
+          <Button
+            color="black"
+            title="Go Route 1: into the house"
+            onPress={() => navigation.navigate("House", { name: "House" })}
+            width={deviceWidth * 0.3}
+          />
+          <View style={{ height: 17 }} />
+          <Button
+            color="black"
+            title="Go Route 2: go down the street"
+            onPress={() => navigation.navigate("Street", { name: "Street" })}
+          />
+          <View style={{ height: 17 }} />
+          <Button
+            color="black"
+            title="Go Route 3: go to the backyard"
+            onPress={() =>
+              navigation.navigate("Backyard", { name: "Backyard" })
+            }
+          />
+        </View>
       </View>
       <View style={{ height: 100 }} />
     </ScrollView>
   );
 };
 
-const house = ({ navigation }) => {
+const House = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.house}>
       <View style={{ height: 60 }} />
@@ -116,7 +121,7 @@ const house = ({ navigation }) => {
   );
 };
 
-const left = ({ navigation }) => {
+const Left = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.hallway}>
       <View style={{ height: 60 }} />
@@ -145,7 +150,7 @@ const left = ({ navigation }) => {
   );
 };
 
-const right = ({ navigation }) => {
+const Right = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.hallway}>
       <View style={{ height: 60 }} />
@@ -174,7 +179,7 @@ const right = ({ navigation }) => {
   );
 };
 
-const street = ({ navigation }) => {
+const Street = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.streetB}>
       <View style={{ height: 60 }} />
@@ -209,7 +214,7 @@ const street = ({ navigation }) => {
   );
 };
 
-const group = ({ navigation }) => {
+const Group = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.men}>
       <View style={{ height: 60 }} />
@@ -238,7 +243,7 @@ const group = ({ navigation }) => {
   );
 };
 
-const outside = ({ navigation }) => {
+const Outside = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.outsideB}>
       <View style={{ height: 60 }} />
@@ -265,7 +270,7 @@ const outside = ({ navigation }) => {
   );
 };
 
-const backyard = ({ navigation }) => {
+const Backyard = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.backyardB}>
       <View style={{ height: 60 }} />
@@ -302,7 +307,7 @@ const backyard = ({ navigation }) => {
   );
 };
 
-const dogs = ({ navigation }) => {
+const Dogs = ({ navigation }) => {
   return (
     <ScrollView contentContainerStyle={styles.dogB}>
       <View style={{ height: 60 }} />
